@@ -22,8 +22,8 @@ License: 	Copyright (c) 2003 Linuxant inc. All rights reserved.
 Group:		System/Kernel and hardware
 Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/%{packname}.tar.bz2
 Source1:   	100498D_RM_HxF_Released.pdf
-Patch0:		hcfpcimodem-1.05full-disable_cfgkernel.patch.bz2
-Patch1:		hcfpcimodem-1.06full-initscripts.patch.bz2
+Patch0:		hcfpcimodem-1.05full-disable_cfgkernel.patch
+Patch1:		hcfpcimodem-1.06full-initscripts.patch
 URL:       	http://www.linuxant.com/drivers/hcf
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:  	pciutils
