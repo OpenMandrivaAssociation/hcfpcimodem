@@ -11,6 +11,7 @@
 %define version		1.10full
 %define release		%mkrel 2
 %define hxftarget	hcfpci
+%define hxftargetdir	%{_prefix}/lib/%{hxftarget}modem
 
 Summary:   	Conexant HCF controllerless modem driver for Linux
 Name:      	%{hxftarget}modem
@@ -178,7 +179,7 @@ set -x
 %{_sbindir}/%{hxftarget}diag
 %{_sbindir}/%{hxftarget}modconflicts
 %{_sbindir}/%{hxftarget}stop
-%{_libdir}/hcfpcimodem/rc%{hxftarget}
+%{hxftargetdir}/rc%{hxftarget}
 %defattr(0444, root, root, 755)
 %dir %{_sysconfdir}/%{name}
 %config %{_sysconfdir}/%{name}/*
