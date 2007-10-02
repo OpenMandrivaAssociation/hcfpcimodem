@@ -24,6 +24,8 @@ Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/
 Source1:   	100498D_RM_HxF_Released.pdf
 Patch0:		hcfpcimodem-1.05full-disable_cfgkernel.patch
 Patch1:		hcfpcimodem-1.06full-initscripts.patch
+# (blino) gcc -v does not match pattern in some locales (at least french)
+Patch2:		hcfpcimodem-1.13full-locale.patch
 URL:       	http://www.linuxant.com/drivers/hcf
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:  	pciutils
@@ -114,6 +116,7 @@ This package contains the documentation for Conexant HCF controllerless modems.
 %setup -q -n %{packname}
 %patch0 -p1 -b .cfg
 %patch1 -p1 -b .init
+%patch2 -p1 -b .locale
 
 %build
 make all
