@@ -16,7 +16,6 @@ Summary:   	Conexant HCF controllerless modem driver for Linux
 Name:      	%{hxftarget}modem
 Version:   	%version
 Release:   	%release
-Vendor:	   	Linuxant
 License: 	Copyright (c) 2003 Linuxant inc. All rights reserved.
 Group:		System/Kernel and hardware
 Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/%{name}-%{version}.tar.bz2
@@ -27,7 +26,6 @@ Patch2:		gcc4.patch.bz2
 Patch3:		hcfpcimodem-1.06full-initscripts.patch.bz2
 URL:       	http://www.linuxant.com/drivers/hcf
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-Packager:	Mandrake Linux Team <http://www.mandrakeexpert.com>
 Requires:  	pciutils
 Requires:	drakxtools >= 9.2-7mdk
 Conflicts: 	hcflinmodem
