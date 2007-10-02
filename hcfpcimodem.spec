@@ -8,8 +8,8 @@
 # agree to these terms before using or distributing this software.
 # 
 
-%define version		1.10
-%define release		%mkrel 2
+%define version		1.13
+%define release		%mkrel 1
 %define hxftarget	hcfpci
 %define hxftargetdir	%{_prefix}/lib/%{hxftarget}modem
 %define packname	%{name}-%{version}full
@@ -20,7 +20,7 @@ Version:   	%version
 Release:   	%release
 License: 	Copyright (c) 2003 Linuxant inc. All rights reserved.
 Group:		System/Kernel and hardware
-Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/%{packname}.tar.bz2
+Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/%{packname}.tar.gz
 Source1:   	100498D_RM_HxF_Released.pdf
 Patch0:		hcfpcimodem-1.05full-disable_cfgkernel.patch
 Patch1:		hcfpcimodem-1.06full-initscripts.patch
