@@ -165,10 +165,12 @@ set -x
 /usr/sbin/dkms --rpm_safe_upgrade add -m %name -v %version
 /usr/sbin/dkms --rpm_safe_upgrade build -m %name -v %version
 /usr/sbin/dkms --rpm_safe_upgrade install -m %name -v %version
+:
 
 %preun -n dkms-%{name}
 set -x
 /usr/sbin/dkms --rpm_safe_upgrade remove -m %name -v %version --all
+:
 
 %files
 %defattr(0555, root, root, 755)
