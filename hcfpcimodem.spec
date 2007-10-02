@@ -8,10 +8,11 @@
 # agree to these terms before using or distributing this software.
 # 
 
-%define version		1.10full
+%define version		1.10
 %define release		%mkrel 2
 %define hxftarget	hcfpci
 %define hxftargetdir	%{_prefix}/lib/%{hxftarget}modem
+%define packname	%{name}-%{version}full
 
 Summary:   	Conexant HCF controllerless modem driver for Linux
 Name:      	%{hxftarget}modem
@@ -19,7 +20,7 @@ Version:   	%version
 Release:   	%release
 License: 	Copyright (c) 2003 Linuxant inc. All rights reserved.
 Group:		System/Kernel and hardware
-Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/%{name}-%{version}.tar.bz2
+Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/%{packname}.tar.bz2
 Source1:   	100498D_RM_HxF_Released.pdf
 Patch0:		hcfpcimodem-1.05full-disable_cfgkernel.patch.bz2
 Patch1:		2.6.12_buildfix.patch.bz2
@@ -112,7 +113,7 @@ Summary:   	Documentation for Conexant HCF controllerless modems
 This package contains the documentation for Conexant HCF controllerless modems.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{packname}
 %patch0 -p1 -b .cfg
 # %patch1 -p1 -b .2612
 # %patch2 -p1 -b .gcc4
