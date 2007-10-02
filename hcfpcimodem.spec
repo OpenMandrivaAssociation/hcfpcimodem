@@ -9,7 +9,7 @@
 # 
 
 %define version		1.10full
-%define release		%mkrel 1
+%define release		%mkrel 2
 %define hxftarget	hcfpci
 
 Summary:   	Conexant HCF controllerless modem driver for Linux
@@ -98,7 +98,8 @@ drivers.
 %package -n dkms-%{name}
 Summary:   	Conexant HCF controllerless modem driver for Linux
 Group:		System/Kernel and hardware
-Requires:	dkms
+Requires(preun):	dkms
+Requires(post): dkms
 
 %description -n dkms-%{name}
 Conexant HCF controllerless modem driver support for Linux kernel %{kernel_version}
