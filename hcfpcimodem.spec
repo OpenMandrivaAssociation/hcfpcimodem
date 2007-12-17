@@ -27,7 +27,6 @@ Patch1:		hcfpcimodem-1.06full-initscripts.patch
 # (blino) gcc -v does not match pattern in some locales (at least french)
 Patch2:		hcfpcimodem-1.13full-locale.patch
 URL:       	http://www.linuxant.com/drivers/hcf
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:  	pciutils
 Requires:	drakxtools >= 9.2-7mdk
 Conflicts: 	hcflinmodem
