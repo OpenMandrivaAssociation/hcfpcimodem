@@ -9,7 +9,7 @@
 # 
 
 %define version		1.13
-%define release		%mkrel 1
+%define release		%mkrel 2
 %define hxftarget	hcfpci
 %define hxftargetdir	%{_prefix}/lib/%{hxftarget}modem
 %define packname	%{name}-%{version}full
@@ -30,6 +30,7 @@ URL:       	http://www.linuxant.com/drivers/hcf
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:  	pciutils
 Requires:	drakxtools >= 9.2-7mdk
+Requires:	kmod(hcfpciengine)
 Conflicts: 	hcflinmodem
 ExclusiveArch:  %{ix86}
 
