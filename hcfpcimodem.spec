@@ -8,8 +8,8 @@
 # agree to these terms before using or distributing this software.
 # 
 
-%define version		1.13
-%define release		%mkrel 3
+%define version		1.17
+%define release		%mkrel 1
 %define hxftarget	hcfpci
 %define hxftargetdir	%{_prefix}/lib/%{hxftarget}modem
 %define packname	%{name}-%{version}full
