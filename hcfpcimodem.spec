@@ -8,7 +8,7 @@
 # agree to these terms before using or distributing this software.
 # 
 
-%define version		1.17
+%define version		1.18
 %define release		%mkrel 1
 %define hxftarget	hcfpci
 %define hxftargetdir	%{_prefix}/lib/%{hxftarget}modem
@@ -22,10 +22,11 @@ License: 	Copyright (c) 2003 Linuxant inc. All rights reserved.
 Group:		System/Kernel and hardware
 Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/%{packname}.tar.gz
 Source1:   	100498D_RM_HxF_Released.pdf
-Patch0:		hcfpcimodem-1.05full-disable_cfgkernel.patch
+Patch0:		hcfpcimodem-1.18full-disable_cfgkernel.patch
 Patch1:		hcfpcimodem-1.06full-initscripts.patch
 # (blino) gcc -v does not match pattern in some locales (at least french)
 Patch2:		hcfpcimodem-1.13full-locale.patch
+Patch3:		hcfpcimodem-1.18full-modbuild-fixes.patch
 URL:       	http://www.linuxant.com/drivers/hcf
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:  	pciutils
@@ -118,6 +119,7 @@ This package contains the documentation for Conexant HCF controllerless modems.
 %patch0 -p1 -b .cfg
 %patch1 -p1 -b .init
 %patch2 -p1 -b .locale
+%patch3 -p1 -b .modbuild-fixes
 
 %build
 make all
