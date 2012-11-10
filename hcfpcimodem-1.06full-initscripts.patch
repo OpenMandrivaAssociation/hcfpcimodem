@@ -1,0 +1,53 @@
+# scripts/cnxtconfig.in |    6 ++++--
+# 1 files changed, 4 insertions(+), 2 deletions(-)
+
+---
+
+--- hcfpcimodem-1.06full/scripts/cnxtconfig.in.orig	2005-09-12 10:21:34.000000000 +0200
++++ hcfpcimodem-1.06full/scripts/cnxtconfig.in	2005-09-12 10:24:00.000000000 +0200
+@@ -1051,7 +1051,9 @@ old_scr_supported()
+ modules_exist()
+ {
+ 	files_present "/lib/modules/${OSKERNVERS}/misc/@CNXTTARGET@"*.${KO} ||
+-		files_present "/lib/modules/${OSKERNVERS}/extra/@CNXTTARGET@"*.${KO}
++		files_present "/lib/modules/${OSKERNVERS}/extra/@CNXTTARGET@"*.${KO} ||
++		files_present "/lib/modules/${OSKERNVERS}/kernel/drivers/char/@CNXTTARGET@"*.${KO}
++
+ }
+ 
+ remove_kernel_modules()
+@@ -1785,7 +1787,7 @@ identify_system()
+ 		ksyms=ksyms
+ 		;;
+ 	*)
+-		KO=ko
++		KO=ko.gz
+ 		ksyms=kallsyms
+ 		;;
+ 	esac
+# scripts/cnxtconfig.in.cfg |    5 +++--
+# 1 files changed, 3 insertions(+), 2 deletions(-)
+
+---
+
+--- hcfpcimodem-1.06full/scripts/cnxtconfig.in.cfg.orig	2005-09-12 10:21:49.000000000 +0200
++++ hcfpcimodem-1.06full/scripts/cnxtconfig.in.cfg	2005-09-12 10:23:37.000000000 +0200
+@@ -1051,7 +1051,8 @@ old_scr_supported()
+ modules_exist()
+ {
+ 	files_present "/lib/modules/${OSKERNVERS}/misc/@CNXTTARGET@"*.${KO} ||
+-		files_present "/lib/modules/${OSKERNVERS}/extra/@CNXTTARGET@"*.${KO}
++		files_present "/lib/modules/${OSKERNVERS}/extra/@CNXTTARGET@"*.${KO} ||
++		files_present "/lib/modules/${OSKERNVERS}/kernel/drivers/char/@CNXTTARGET@"*.${KO}
+ }
+ 
+ remove_kernel_modules()
+@@ -1785,7 +1786,7 @@ identify_system()
+ 		ksyms=ksyms
+ 		;;
+ 	*)
+-		KO=ko
++		KO=ko.gz
+ 		ksyms=kallsyms
+ 		;;
+ 	esac

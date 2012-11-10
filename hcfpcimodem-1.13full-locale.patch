@@ -1,0 +1,11 @@
+--- hcfpcimodem-1.13full/modules/kernelcompiler.sh.locale	2007-10-02 21:09:45.000000000 +0200
++++ hcfpcimodem-1.13full/modules/kernelcompiler.sh	2007-10-02 21:09:52.000000000 +0200
+@@ -43,7 +43,7 @@ for c in gcc /usr/bin/gcc[0-9]* /usr/bin
+ 	esac
+ 
+ 	if which $c >/dev/null 2>&1; then
+-		v="`eval $c -v 2>&1 | tail -n 1`"
++		v="`eval LC_ALL=C $c -v 2>&1 | tail -n 1`"
+ 		case "$v" in
+ 		gcc?[vV]ersion\ *)
+ 			;;

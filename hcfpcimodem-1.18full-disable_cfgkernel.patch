@@ -1,0 +1,12 @@
+diff -p -up hcfpcimodem-1.18full/scripts/cnxtconfig.in.orig hcfpcimodem-1.18full/scripts/cnxtconfig.in
+--- hcfpcimodem-1.18full/scripts/cnxtconfig.in.orig	2008-12-18 22:30:26.000000000 -0200
++++ hcfpcimodem-1.18full/scripts/cnxtconfig.in	2009-04-16 16:42:27.000000000 -0300
+@@ -2945,7 +2945,7 @@ fi
+ 
+ # If nothing explicitely specified, configure everything
+ if ! ${explicitopt}; then
+-	do_cfgkernel=true
++#	do_cfgkernel=true
+ 	do_cfgserial=true
+ 	if [ "@CNXTDRIVER@" != "dgc" ]; then
+ 	do_cfgregion=true
