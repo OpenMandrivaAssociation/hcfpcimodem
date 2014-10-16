@@ -9,7 +9,7 @@
 # 
 
 %define version		1.20
-%define release		%mkrel 1
+%define release		2
 %define hxftarget	hcfpci
 %define hxftargetdir	%{_prefix}/lib/%{hxftarget}modem
 %define packname	%{name}-%{version}full
