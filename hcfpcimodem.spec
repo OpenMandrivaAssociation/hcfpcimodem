@@ -94,8 +94,8 @@ for non-beta, officially released versions. Redistribution of versions
 marked "beta" or "lnxtbeta" requires explicit written approval from
 Linuxant.
 
-You must also install the %{name}_kernel module if you want to utilize these
-drivers.
+You must also install the %{name}_kernel module if you want to
+utilize these drivers.
 
 %package -n dkms-%{name}
 Summary:   	Conexant HCF controllerless modem driver for Linux
