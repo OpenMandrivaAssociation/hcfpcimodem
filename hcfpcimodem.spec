@@ -33,7 +33,7 @@ Requires:  	pciutils
 Requires:	drakxtools >= 9.2-7mdk
 Requires:	kmod(hcfpciengine)
 Conflicts: 	hcflinmodem
-#ExclusiveArch:  %{ix86}
+ExclusiveArch:  %{ix86}
 
 %description
 Conexant HCF controllerless modem driver for Linux
