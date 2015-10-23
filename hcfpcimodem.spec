@@ -7,7 +7,7 @@
 # the file LICENSE, which is included in the package. You must read this and
 # agree to these terms before using or distributing this software.
 # 
-
+%define debug_package %{nil}
 %define version		1.20
 %define release		3
 %define hxftarget	hcfpci
@@ -22,6 +22,7 @@ License: 	Copyright (c) 2003 Linuxant inc. All rights reserved.
 Group:		System/Kernel and hardware
 Source:    	http://www.linuxant.com/drivers/hcf/full/archive/%{name}-%{version}/%{packname}.tar.gz
 Source1:   	100498D_RM_HxF_Released.pdf
+Source100:	hcfpcimodem.rpmlintrc
 Patch0:		hcfpcimodem-1.18full-disable_cfgkernel.patch
 Patch1:		hcfpcimodem-1.06full-initscripts.patch
 # (blino) gcc -v does not match pattern in some locales (at least french)
@@ -32,7 +33,7 @@ Requires:  	pciutils
 Requires:	drakxtools >= 9.2-7mdk
 Requires:	kmod(hcfpciengine)
 Conflicts: 	hcflinmodem
-ExclusiveArch:  %{ix86}
+#ExclusiveArch:  %{ix86}
 
 %description
 Conexant HCF controllerless modem driver for Linux
@@ -104,7 +105,7 @@ Requires(preun):	dkms
 Requires(post): dkms
 
 %description -n dkms-%{name}
-Conexant HCF controllerless modem driver support for Linux kernel %{kernel_version}
+Conexant HCF controllerless modem driver support for Linux kernel
 
 %package doc
 Group:     	System/Kernel and hardware

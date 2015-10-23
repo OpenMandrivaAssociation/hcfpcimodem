@@ -1,0 +1,3 @@
+addFilter("E: unstripped-binary-or-object")
+addFilter("W: conffile-without-noreplace-flag")
+addFilter("W: cross-directory-hard-link")
