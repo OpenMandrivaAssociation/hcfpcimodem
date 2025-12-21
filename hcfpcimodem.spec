@@ -35,6 +35,7 @@ Requires:	kmod(hcfpciengine)
 Conflicts: 	hcflinmodem
 ExclusiveArch:  %{ix86}
 
+BuildRequires:	make
 %description
 Conexant HCF controllerless modem driver for Linux
 
